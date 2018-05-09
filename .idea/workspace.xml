@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65237b73-51a8-43c7-9462-6b6036e7754b" name="Default" comment="Changed port number">
+      <change afterPath="$PROJECT_DIR$/templates/partials/resultstable.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/company.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/company.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/compare.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/compare.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mainpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mainpage.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Databases_Final_Project$main_app.coverage" NAME="main_app Coverage Results" MODIFIED="1525885307714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Databases_Final_Project$main_app.coverage" NAME="main_app Coverage Results" MODIFIED="1525895747811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Databases_Final_Project$mypopulate.coverage" NAME="mypopulate Coverage Results" MODIFIED="1525838870406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Raw Data" />
     <SUITE FILE_PATH="coverage/Final_Project$appex.coverage" NAME="appex Coverage Results" MODIFIED="1525810362163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Final_Project$mypopulate.coverage" NAME="mypopulate Coverage Results" MODIFIED="1525809709352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Raw Data" />
@@ -45,16 +50,35 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="companydb: schema" type="c314c289:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="companydb@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="companydb: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="yearrank: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main_app.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main_app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
+            <state relative-caret-position="670">
+              <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="resultstable.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/partials/resultstable.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -71,7 +95,7 @@
       <file leaf-file-name="mypopulate.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Raw Data/mypopulate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="-353">
               <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
@@ -89,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="compare.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="compare.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/compare.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+            <state relative-caret-position="368">
+              <caret line="25" column="77" lean-forward="true" selection-start-line="25" selection-start-column="77" selection-end-line="25" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -101,7 +125,7 @@
       <file leaf-file-name="advancedsearch.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/advancedsearch.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
+            <state relative-caret-position="54">
               <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
@@ -110,8 +134,8 @@
       <file leaf-file-name="company.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/company.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" column="20" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="37" />
+            <state relative-caret-position="122">
+              <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -119,8 +143,8 @@
       <file leaf-file-name="mainpage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/mainpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="51" column="57" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="57" />
+            <state relative-caret-position="306">
+              <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -140,6 +164,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -154,15 +179,17 @@
         <option value="$PROJECT_DIR$/Raw Data/mypopulate.py" />
         <option value="$PROJECT_DIR$/appex.py" />
         <option value="$PROJECT_DIR$/static/basic_search.js" />
-        <option value="$PROJECT_DIR$/templates/company.html" />
         <option value="$PROJECT_DIR$/static/create_graphs.js" />
-        <option value="$PROJECT_DIR$/templates/compare.html" />
         <option value="$PROJECT_DIR$/templates/advancedsearch.html" />
-        <option value="$PROJECT_DIR$/templates/mainpage.html" />
         <option value="$PROJECT_DIR$/static/advanced_search.js" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b80ae32d-486f-4ad5-bb5a-7e5e44fd2fab/console_1.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b80ae32d-486f-4ad5-bb5a-7e5e44fd2fab/console.sql" />
+        <option value="$PROJECT_DIR$/templates/resultstable.html" />
+        <option value="$PROJECT_DIR$/templates/partials/resultstable.html" />
+        <option value="$PROJECT_DIR$/templates/company.html" />
+        <option value="$PROJECT_DIR$/templates/mainpage.html" />
         <option value="$PROJECT_DIR$/main_app.py" />
+        <option value="$PROJECT_DIR$/templates/compare.html" />
       </list>
     </option>
   </component>
@@ -215,6 +242,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/Change SQL Dialect" value="MySQL" />
@@ -226,11 +254,12 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/partials" />
+      <recent name="D:\Users\Marshall\Documents\Databases\Final Project\static" />
       <recent name="D:\Users\Marshall\Documents\Databases\Final Project\templates" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Users\Marshall\Documents\Databases\Final Project\static" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Users\Marshall\Documents\Databases\Final Project\templates" />
     </key>
   </component>
@@ -347,17 +376,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5021322" side_tool="true" weight="0.32934782" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.4978678" weight="0.32827586" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.4978678" visible="true" weight="0.28827587" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32827586" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32934782" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32827586" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.35218093" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32827586" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.08562197" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.24071082" />
+      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.24071082" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="7" />
@@ -413,13 +443,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Changed port number" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main_app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b80ae32d-486f-4ad5-bb5a-7e5e44fd2fab/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -683,31 +706,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/advancedsearch.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mainpage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" column="57" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/basic_search.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/compare.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -736,13 +738,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Raw Data/mypopulate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
+    <entry file="das://b80ae32d-486f-4ad5-bb5a-7e5e44fd2fab/schema/companydb/table/alias">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -753,24 +752,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/company.html">
+    <entry file="file://$PROJECT_DIR$/Raw Data/mypopulate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="20" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="37" />
+        <state relative-caret-position="-353">
+          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="das://b80ae32d-486f-4ad5-bb5a-7e5e44fd2fab/schema/companydb/table/alias">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/templates/advancedsearch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/partials/resultstable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/company.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mainpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
+        <state relative-caret-position="670">
+          <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/compare.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="25" column="77" lean-forward="true" selection-start-line="25" selection-start-column="77" selection-end-line="25" selection-end-column="77" />
         </state>
       </provider>
     </entry>

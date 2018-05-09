@@ -38,6 +38,11 @@ def compare():
         return ''
 
 
+@app.route('/about/')
+def about():
+    return flask.redirect('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+
+
 @app.route('/search', methods=['POST'])
 def basic_search():
     search_value = flask.request.form['searchInput']
@@ -57,7 +62,7 @@ def basic_search():
         query_string = ("SELECT * FROM (company NATURAL JOIN hq)"
                         " WHERE hq_state LIKE %s;")
     elif search_type == 'ticker':
-        columns = ['title', 'revenues', 'assets', 'ticker']
+        columns = ['title', 'year', 'revenues', 'assets', 'ticker']
         query_string = ("SELECT * FROM (company NATURAL JOIN alias NATURAL JOIN yearrank)"
                         " WHERE ticker LIKE %s;")
     conn = MySQLdb.connect(host='localhost',

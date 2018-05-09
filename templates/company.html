@@ -25,29 +25,14 @@
                 <a class="nav-link" href="/compare/">Compare</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="/about/">About</a>
             </li>
         </ul>
     </div>
 </nav>
-<h1>{{ title }}</h1>
-<table class="table table-bordered table-hover col-10">
-    <thead>
-    <tr>
-        {% for column in columns: %}
-            <th scope="col">{{ column.replace('_', ' ').title() }}</th>
-        {% endfor %}
-    </tr>
-    </thead>
-    <tbody>
-    {% for row in data: %}
-        <tr>
-            {% for column in columns: %}
-                <td>{{ row[column] }}</td>
-            {% endfor %}
-        </tr>
-    {% endfor %}
-    </tbody>
-</table>
+<h1>Results Found - {{ data|length }}</h1>
+{% block table %}
+{% include "partials/resultstable.html" %}
+{% endblock %}
 </body>
 </html>

@@ -1,0 +1,21 @@
+
+{% block table %}
+<table class="table table-bordered table-hover col-10">
+    <thead>
+    <tr>
+        {% for column in columns: %}
+            <th scope="col">{{ column.replace('_', ' ').title() }}</th>
+        {% endfor %}
+    </tr>
+    </thead>
+    <tbody>
+    {% for row in data: %}
+        <tr>
+            {% for column in columns: %}
+                <td>{{ row[column] }}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
