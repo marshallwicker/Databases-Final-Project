@@ -32,7 +32,9 @@
 </nav>
 <h1>Results Found - {{ data|length }}</h1>
 {% block table %}
-{% include "partials/resultstable.html" %}
+    {% if data|length > 0 %}
+        {% include "partials/resultstable.html" %}
+    {% endif %}
 {% endblock %}
 </body>
 </html>
