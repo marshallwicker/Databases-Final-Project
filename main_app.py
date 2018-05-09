@@ -72,4 +72,4 @@ def basic_search():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=42069, debug=True)
