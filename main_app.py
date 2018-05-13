@@ -80,7 +80,6 @@ def json_company(title):
                            db='companyDB',
                            cursorclass=MySQLdb.cursors.DictCursor)
     c = conn.cursor()
-    search_tags = ['title', 'full_name', 'website', 'ticker', 'industry', 'sector', ]
     c.execute('SELECT title, full_name, website, ticker, industry, sector FROM '
               '(company NATURAL JOIN alias NATURAL JOIN industry NATURAL JOIN sector) '
               'WHERE title LIKE %s', [title + '%'])
