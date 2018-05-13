@@ -71,5 +71,25 @@ def basic_search():
     return flask.render_template('company.html', title='Results', columns=columns, data=[r for r in rs])
 
 
+@app.route('/json/company/<title>')
+@support_jsonp
+def json_company(title):
+    conn = MySQLdb.connect(host='localhost',
+                           user='searchquery',
+                           passwd='',
+                           db='companyDB',
+                           cursorclass=MySQLdb.cursors.DictCursor)
+    c = conn.cursor()
+    search_tags = ['title', 'full_name', 'website', 'ticker', 'industry', 'sector', ]
+    c.execute('SELECT title, full_name, website, ticker, industry, sector FROM '
+              '(company NATURAL JOIN alias NATURAL JOIN industry NATURAL JOIN sector) '
+              'WHERE title LIKE %s', [title + '%'])
+    if c.rowcount > 0:
+        rs = c.fetchall()
+        result_list = [r for r in rs]
+    s = json.dumps({'companies': result_list})
+    return s
+
+
 if __name__ == '__main__':
     app.run(debug=True)
