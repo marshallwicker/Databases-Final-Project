@@ -5,6 +5,12 @@ from functools import wraps
 import flask
 app = flask.Flask(__name__, static_folder='static', static_url_path='')
 
+def db_connect():
+    return MySQLdb.connect(host='localhost',
+                    user='searchquery',
+                    passwd='',
+                    db='companyDB',
+                    cursorclass=MySQLdb.cursors.DictCursor)
 
 def support_jsonp(f):
     """Wraps JSONified output for JSONP"""
@@ -33,9 +39,25 @@ def advanced_search():
 @app.route('/compare/', methods=['GET', 'POST'])
 def compare():
     if flask.request.method == 'GET':
-        return flask.render_template('compare.html', title='Compare')
+        return flask.render_template('compare.html', title='Compare', years=[])
     else:
-        return ''
+        search_value = flask.request.form['searchInput']
+        query_string = "SELECT title, year, revenues FROM (company natural join yearrank) " \
+                       "WHERE title LIKE %s LIMIT 2;"
+        conn = db_connect()
+
+        c = conn.cursor()
+        c.execute(query_string, [search_value + '%'])
+        rs = list(c)
+        print(rs)
+        company_name = rs[0]['title']
+        years = []
+        revenues = []
+        for year in rs:
+            years.append(year['year'])
+            revenues.append(round(float(year['revenues'])))
+        print(years, revenues)
+        return flask.render_template('compare.html', company_name=company_name, years=years, revenues=revenues)
 
 
 @app.route('/about/')
@@ -65,11 +87,7 @@ def basic_search():
         columns = ['title', 'year', 'revenues', 'assets', 'ticker']
         query_string = ("SELECT * FROM (company NATURAL JOIN alias NATURAL JOIN yearrank)"
                         " WHERE ticker LIKE %s;")
-    conn = MySQLdb.connect(host='localhost',
-                           user='searchquery',
-                           passwd='',
-                           db='companyDB',
-                           cursorclass=MySQLdb.cursors.DictCursor)
+    conn = db_connect()
     c = conn.cursor()
     c.execute(query_string, [search_value + '%'])
     rs = c.fetchall()
@@ -79,11 +97,7 @@ def basic_search():
 @app.route('/json/company/<title>')
 @support_jsonp
 def json_company(title):
-    conn = MySQLdb.connect(host='localhost',
-                           user='searchquery',
-                           passwd='',
-                           db='companyDB',
-                           cursorclass=MySQLdb.cursors.DictCursor)
+    conn = db_connect()
     c = conn.cursor()
     c.execute('SELECT title, full_name, website, ticker, industry, sector FROM '
               '(company NATURAL JOIN alias NATURAL JOIN industry NATURAL JOIN sector) '

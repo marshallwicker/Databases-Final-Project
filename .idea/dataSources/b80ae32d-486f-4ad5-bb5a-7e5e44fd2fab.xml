@@ -2,6 +2,9 @@
 <dataSource name="companydb@localhost">
   <database-model serializer="dbm" rdbms="MYSQL" format-version="4.8">
     <root id="1">
+      <ServerVersion>8.0.11</ServerVersion>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
       <DefaultCasing>lower/lower</DefaultCasing>
     </root>
     <schema id="2" parent="1" name="companydb">
@@ -1106,27 +1109,13 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="278" parent="2" name="alias">
-      <Engine>InnoDB</Engine>
-    </table>
-    <table id="279" parent="2" name="ceotitle">
-      <Engine>InnoDB</Engine>
-    </table>
-    <table id="280" parent="2" name="company">
-      <Engine>InnoDB</Engine>
-    </table>
-    <table id="281" parent="2" name="hq">
-      <Engine>InnoDB</Engine>
-    </table>
-    <table id="282" parent="2" name="industry">
-      <Engine>InnoDB</Engine>
-    </table>
-    <table id="283" parent="2" name="sector">
-      <Engine>InnoDB</Engine>
-    </table>
-    <table id="284" parent="2" name="yearrank">
-      <Engine>InnoDB</Engine>
-    </table>
+    <table id="278" parent="2" name="alias"/>
+    <table id="279" parent="2" name="ceotitle"/>
+    <table id="280" parent="2" name="company"/>
+    <table id="281" parent="2" name="hq"/>
+    <table id="282" parent="2" name="industry"/>
+    <table id="283" parent="2" name="sector"/>
+    <table id="284" parent="2" name="yearrank"/>
     <view id="285" parent="3" name="CHARACTER_SETS">
       <System>1</System>
     </view>
@@ -1334,6 +1323,7 @@
     <index id="350" parent="278" name="full_name">
       <ColNames>full_name</ColNames>
       <Unique>1</Unique>
+      <Type>btree</Type>
     </index>
     <key id="351" parent="278" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1367,6 +1357,7 @@
     <index id="356" parent="279" name="title">
       <ColNames>title</ColNames>
       <Unique>1</Unique>
+      <Type>btree</Type>
     </index>
     <key id="357" parent="279" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1426,15 +1417,19 @@
     <index id="367" parent="280" name="title">
       <ColNames>title</ColNames>
       <Unique>1</Unique>
+      <Type>btree</Type>
     </index>
     <index id="368" parent="280" name="sector_ID">
       <ColNames>sector_ID</ColNames>
+      <Type>btree</Type>
     </index>
     <index id="369" parent="280" name="industry_ID">
       <ColNames>industry_ID</ColNames>
+      <Type>btree</Type>
     </index>
     <index id="370" parent="280" name="ceo_title_ID">
       <ColNames>ceo_title_ID</ColNames>
+      <Type>btree</Type>
     </index>
     <key id="371" parent="280" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1505,10 +1500,12 @@ city
 hq_state
 zip</ColNames>
       <Unique>1</Unique>
+      <Type>btree</Type>
     </index>
     <index id="383" parent="281" name="phone">
       <ColNames>phone</ColNames>
       <Unique>1</Unique>
+      <Type>btree</Type>
     </index>
     <key id="384" parent="281" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1549,6 +1546,7 @@ zip</ColNames>
     <index id="390" parent="282" name="industry">
       <ColNames>industry</ColNames>
       <Unique>1</Unique>
+      <Type>btree</Type>
     </index>
     <key id="391" parent="282" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1576,6 +1574,7 @@ zip</ColNames>
     <index id="395" parent="283" name="sector">
       <ColNames>sector</ColNames>
       <Unique>1</Unique>
+      <Type>btree</Type>
     </index>
     <key id="396" parent="283" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>

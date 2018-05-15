@@ -35,23 +35,39 @@
     <form action="{{ url_for('compare') }}" method="post">
 
         <div class="form-row input-group">
-            <select id="searchon" name="searchon" class="form-control custom-select col-md-auto" onchange="changeSearchAspect()">
-                <option value="cname" selected="">Company Name</option>
-                <option value="ceo">Ceo</option>
-                <option value="state">State</option>
-                <option value="ticker">Ticker Name</option>
-            </select>
-            <input name="searchInput" type="text" class="form-control" placeholder="Company Name 1" id="searchInput1">
-            <input name="searchInput" type="text" class="form-control" placeholder="Company Name 2" id="searchInput2">
-
-        </div>
-        <div class="form-row mt-3">
-            <div class="col-2">
-
-            </div>
+            <input name="searchInput" type="text" class="form-control" placeholder="Company Name" id="searchInput">
             <button class="btn btn-dark col-2" type="submit">Search</button>
         </div>
     </form>
 </div>
+{% if years|length > 0 %}
+    <h1>{{ company_name }}</h1>
+    <div class="chart-container" style="position: relative; height:40vh; width:80vw">
+    <canvas id="chart">
+        <script>
+            var ctx = document.getElementById("chart").getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: {{ years }},
+                    datasets: [{
+                        label: 'Revenue',
+                        data: {{ revenues }}
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero:true
+                            }
+                        }]
+                    }
+                }
 
+        });
+        </script>
+    </canvas>
+    </div>
+{% endif %}
 </body>
